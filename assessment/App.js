@@ -8,6 +8,7 @@ import SignupScreen from './SignupForm';
 import HomeScreen from './HomeScreen';
 import ChatScreen from './ChatScreen';
 import SettingsScreen from './Settings';
+import ProfileSettingsScreen from './ProfileSettings';
 
 const Stack = createStackNavigator();
 
@@ -21,6 +22,7 @@ function App() {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Chats" component={ChatScreen} />
         <Stack.Screen name="Settings" component={SettingsScreen} />
+        <Stack.Screen name="Profile settings" component={ProfileSettingsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

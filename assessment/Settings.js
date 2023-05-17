@@ -10,7 +10,7 @@ const SettingsScreen = ({ onUpdateProfile, onLogout, route }) => {
       <Text>Session Token: {sessionToken}</Text> {/* Display the session token */}
       <Button
         title="Profile settings"
-        onPress={onUpdateProfile}
+        onPress={() => navigation.navigate('Profile Settings')}
       />
       <Button
         title="Logout"
