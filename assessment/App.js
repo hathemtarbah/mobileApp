@@ -1,20 +1,49 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import { View, Text, Button, StyleSheet } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+class App extends Component {
+  constructor(props){
+    super(props);
+  }
+
+  // Navigation functions
+  navigateToLogin = () => {
+    // Navigate to Login screen
+  }
+
+  navigateToSignup = () => {
+    // Navigate to Signup screen
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.title}>Welcome to WhatsThat!</Text>
+        <Button 
+          title="Login" 
+          onPress={this.navigateToLogin} 
+        />
+        <Button 
+          title="Signup" 
+          onPress={this.navigateToSignup} 
+        />
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 50,
   },
 });
+
+export default App;
